@@ -1,8 +1,17 @@
+import { useMemo, useState } from 'react';
 import { ReactComponent as Filter } from '../../assets/images/filter.svg';
 import Pagination from './Pagination';
 // import { ReactComponent as DownArrow } from '../../assets/images/down_arrow.svg';
 
-const CustomTable = ({ dataSource, columns, className = '' }) => {
+const CustomTable = ({ dataSource, columns, className = '', PageSize=2 }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const currentTableData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize;
+    const lastPageIndex = firstPageIndex + PageSize;
+    return dataSource.slice(firstPageIndex, lastPageIndex);
+  }, [currentPage]);
+
   const headerRender = (data) => {
     return <th style={{ textAlign: data.align }} >{data.title}</th>;
   };
@@ -81,6 +90,12 @@ const CustomTable = ({ dataSource, columns, className = '' }) => {
               </option>
             </select>
           </div>
+          <div className='custom-table_filter_wrapper_clear'>
+            <h1>Clear Filter</h1>
+            <button className='custom-table_filter_wrapper_clear_btn'>
+              Apply
+            </button>
+          </div>
         </div>
       </div>
       <table className={className}>
@@ -92,12 +107,18 @@ const CustomTable = ({ dataSource, columns, className = '' }) => {
           </tr>
         </thead>
         <tbody>
-          {dataSource.map((data) => {
+          {currentTableData.map((data) => {
             return bodyRender(data);
           })}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination 
+        className="pagination-bar"
+        currentPage={currentPage}
+        totalCount={dataSource.length}
+        pageSize={PageSize}
+        onPageChange={page => setCurrentPage(page)}
+      />
     </div>
   );
 };
