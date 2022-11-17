@@ -5,9 +5,9 @@
   justify-content: space-between;
   left: 0;
   padding: 2.7rem 5rem;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  //position: fixed;
+  // right: 0;
+  // bottom: 0;
   transition: all 0.3s;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -35,7 +35,7 @@
         line-height: 36px;
       }
       div {
-        font-family: "Poppins-Regular", sans-serif;
+        font-family: Poppins;
         font-style: normal;
         font-weight: 600;
         font-size: 30px;
@@ -51,7 +51,7 @@
     &_text {
       width: 100%;
       max-width: 20.5rem;
-      font-family: "Raleway", sans-serif;
+      font-family: Raleway;
       font-style: normal;
       font-weight: 600;
       font-size: 2.2rem;
@@ -71,7 +71,7 @@
       flex-direction: column;
       margin-right: 1.5rem;
       h1 {
-        font-family: "Raleway", sans-serif;
+        font-family: Raleway;
         font-style: normal;
         font-weight: 600;
         font-size: 2.6rem;
@@ -80,7 +80,7 @@
         color: #000000;
       }
       span {
-        font-family: "Raleway", sans-serif;
+        font-family: Raleway;
         font-style: normal;
         font-weight: 600;
         font-size: 2.2rem;
@@ -98,7 +98,7 @@
     width: 100%;
     max-width: fit-content;
     h1 {
-      font-family: "Raleway", sans-serif;
+      font-family: Raleway;
       font-style: normal;
       font-weight: 600;
       font-size: 2.6rem;
