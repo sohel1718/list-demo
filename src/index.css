@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type=file]::-moz-file-upload-button {
+  cursor: pointer;
+}
+
+input[type=file]::-ms-file-upload-button {
+  cursor: pointer;
+}
+
+input[type=file]::-o-file-upload-button {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=file] {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: visible;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 10px;
+}
+
+*::-moz-selection {
+  color: #ffffff;
+  background: #000000;
+}
+
+*::-webkit-selection {
+  color: #ffffff;
+  background: #000000;
+}
+
+*::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
 }

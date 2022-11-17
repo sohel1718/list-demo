@@ -1,0 +1,54 @@
+.dash {
+  width: 100%;
+  height: 100%;
+  margin-top: 10rem;
+  overflow: hidden;
+  &_search {
+    width: 100%;
+    background: #07a189;
+    padding: 24px 60px;
+    height: 100%;
+    //min-height: 500px;
+    h1 {
+      font-family: "Poppins-Regular", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 51px;
+      color: #ffffff;
+      margin: 0;
+      margin-top: 24px;
+    }
+    &_search-input {
+      margin-top: 19px;
+      margin-bottom: 108px;
+      display: flex;
+      justify-content: center;
+
+      input {
+        background: #ffffff;
+        border: 1px solid #07a189;
+        box-shadow: 3px 18px 37px 10px rgba(165, 165, 165, 0.2);
+        border-radius: 20px;
+        padding: 20px 38px 20px 38px;
+        width: 100%;
+        max-width: 665px;
+      }
+      svg {
+        position: absolute;
+        right: 80px;
+        bottom: 10;
+        margin-top: 15px;
+        &:after {
+          background-color: #000;
+          bottom: 2rem;
+          content: "";
+          position: absolute;
+          right: 8rem;
+          top: 2rem;
+          width: 2px;
+        }
+      }
+    }
+  }
+}

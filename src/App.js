@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import publicRouter from './Routes/PublicRouter';
+import NotFound from './Layout/NotFound';
+import { Routes, useNavigate, Route } from 'react-router-dom';
 
 function App() {
+  let navigate = useNavigate();
+
+  const handleNavigate = (link) => {
+    navigate(link);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        {publicRouter(handleNavigate)}
+        <Route path="*" element={<NotFound handleNavigate={handleNavigate} />} />
+      </Routes>
+    </>
   );
 }
 
