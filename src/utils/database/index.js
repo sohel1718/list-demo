@@ -51,7 +51,7 @@ export const dataSource = [
     },
     {
         id: 6,
-        buyer: "Albert Flores",
+        buyer: "Angel Egotrip",
         projectDetails:
           "This is a freelance proposal template and example. Learn how to write a project or bid proposal and get hired for more projects faster.",
         price: 200,
@@ -61,7 +61,7 @@ export const dataSource = [
       },
       {
         id: 7,
-        buyer: "Sohel Chhipa",
+        buyer: "Made Savage",
         projectDetails:
           "Learn how to write a project or bid proposal and get hired for more projects faster.",
         price: 500,
@@ -71,7 +71,7 @@ export const dataSource = [
       },
       {
         id: 8,
-        buyer: "Arjun Vishvakarma",
+        buyer: "Binary Bark",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 800,
@@ -81,7 +81,7 @@ export const dataSource = [
       },
       {
         id: 9,
-        buyer: "Rahul Borawat",
+        buyer: "The Deal",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 1000,
@@ -91,7 +91,7 @@ export const dataSource = [
       },
       {
         id: 10,
-        buyer: "Sonu Singh",
+        buyer: "Fiddle Pie",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 900,
@@ -101,7 +101,7 @@ export const dataSource = [
       },
       {
         id: 11,
-        buyer: "Albert Flores",
+        buyer: "Raid Brigade",
         projectDetails:
           "This is a freelance proposal template and example. Learn how to write a project or bid proposal and get hired for more projects faster.",
         price: 200,
@@ -111,7 +111,7 @@ export const dataSource = [
       },
       {
         id: 12,
-        buyer: "Sohel Chhipa",
+        buyer: "Geez God",
         projectDetails:
           "Learn how to write a project or bid proposal and get hired for more projects faster.",
         price: 500,
@@ -121,7 +121,7 @@ export const dataSource = [
       },
       {
         id: 13,
-        buyer: "Arjun Vishvakarma",
+        buyer: "Mindhack Diva",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 800,
@@ -131,7 +131,7 @@ export const dataSource = [
       },
       {
         id: 14,
-        buyer: "Rahul Borawat",
+        buyer: "Sugar Lump",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 1000,
@@ -141,7 +141,7 @@ export const dataSource = [
       },
       {
         id: 15,
-        buyer: "Sonu Singh",
+        buyer: "K For Kun",
         projectDetails:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         price: 900,
