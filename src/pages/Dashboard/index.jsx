@@ -150,7 +150,7 @@ const Dashboard = () => {
           <Search />
         </div>
         <div className="dash_search_res-search">
-          <input type="text" placeholder="Search more projects" />
+          <input onChange={searchData} type="text" placeholder="Search more projects" />
           <button>
             <Search />
           </button>
