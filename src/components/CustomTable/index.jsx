@@ -10,7 +10,7 @@ const CustomTable = ({ dataSource, columns, className = '', PageSize=2 }) => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return dataSource.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
+  }, [currentPage, dataSource]);
 
   const headerRender = (data) => {
     return <th style={{ textAlign: data.align }} >{data.title}</th>;

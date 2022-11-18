@@ -3,90 +3,17 @@ import { ReactComponent as User } from "../../assets/images/user.svg";
 import { ReactComponent as Ruppe } from "../../assets/images/ruppe.svg";
 import { ReactComponent as CurvedArrow } from "../../assets/images/curvedArrow.svg";
 import CustomTable from "../../components/CustomTable";
-import moment from "moment/moment";
-import { stringToHslColor } from "../../utils";
-
-const getDeliveryTime = (date) => {
-  let formatDate = moment(date, "DD/MM/YYYY");
-  let startDate = moment();
-  var duration = moment.duration(formatDate.diff(startDate));
-  //var days = Number(duration.asDays());
-  let res = getDuration(duration, formatDate);
-  return res;
-};
-
-const getPostTime = (date) => {
-  let formatDate = moment(date, "DD/MM/YYYY");
-  let startDate = moment();
-  var duration = moment.duration(startDate.diff(formatDate));
-  //var days = Number(duration.asDays());
-  let res = getPrevDuration(duration, formatDate);
-  return res;
-};
-
-export const getPrevDuration = (duration, date) => {
-  let seconds = duration.asSeconds();
-  let minutes = duration.asMinutes();
-  let hours = duration.asHours();
-  let days = duration.asDays();
-  let months = duration.asMonths();
-  let years = duration.asYears();
-
-  if (minutes >= 525600) {
-    return `${years.toFixed()} year ago`;
-  } else if (months >= 1) {
-    return moment(date).format("MMM DD");
-  } else if (days < 2) {
-    if (seconds < 60) {
-      return "now";
-    } else if (minutes <= 1) {
-      return `${minutes?.toString()?.split(".")[0]} min ago`;
-    } else if (minutes > 1 && minutes < 60) {
-      return `${minutes?.toString()?.split(".")[0]} mins ago`;
-    } else if (minutes >= 60 && minutes < 120) {
-      return `${hours?.toString()?.split(".")[0]} hour ago`;
-    } else if (minutes >= 120 && minutes < 1440) {
-      return `${hours?.toString()?.split(".")[0]} hours ago`;
-    } else {
-      return `${days?.toString()?.split(".")[0]} day ago`;
-    }
-  } else if (days > 1) {
-    return `${days?.toString()?.split(".")[0]} days ago`;
-  }
-};
-
-export const getDuration = (duration, date) => {
-  let seconds = duration.asSeconds();
-  let minutes = duration.asMinutes();
-  let hours = duration.asHours();
-  let days = duration.asDays();
-  let months = duration.asMonths();
-  let years = duration.asYears();
-
-  if (minutes >= 525600) {
-    return `${years.toFixed()} year`;
-  } else if (months >= 1) {
-    return moment(date).format("MMM DD");
-  } else if (days < 2) {
-    if (seconds < 60) {
-      return "now";
-    } else if (minutes <= 1) {
-      return `${minutes?.toString()?.split(".")[0]} min`;
-    } else if (minutes > 1 && minutes < 60) {
-      return `${minutes?.toString()?.split(".")[0]} mins`;
-    } else if (minutes >= 60 && minutes < 120) {
-      return `${hours?.toString()?.split(".")[0]} hour`;
-    } else if (minutes >= 120 && minutes < 1440) {
-      return `${hours?.toString()?.split(".")[0]} hours`;
-    } else {
-      return `${days?.toString()?.split(".")[0]} day`;
-    }
-  } else if (days > 1) {
-    return `${days?.toString()?.split(".")[0]} days`;
-  }
-};
+import { getDeliveryTime, getPostTime, stringToHslColor } from "../../utils";
+import { useEffect, useState } from "react";
+import { getData, searchBuyer } from "../../utils/database";
 
 const Dashboard = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(getData());
+  }, []);  
+  
   const columns = [
     {
       title: "Buyer",
@@ -209,65 +136,17 @@ const Dashboard = () => {
     },
   ];
 
-  const dataSource = [
-    {
-      id: 1,
-      buyer: "Albert Flores",
-      projectDetails:
-        "This is a freelance proposal template and example. Learn how to write a project or bid proposal and get hired for more projects faster.",
-      price: 200,
-      deliveryTime: "21/11/2022",
-      postDay: "15/11/2022",
-      offer: "250",
-    },
-    {
-      id: 2,
-      buyer: "Sohel Chhipa",
-      projectDetails:
-        "Learn how to write a project or bid proposal and get hired for more projects faster.",
-      price: 500,
-      deliveryTime: "22/11/2022",
-      postDay: "11/11/2022",
-      offer: "525",
-    },
-    {
-      id: 2,
-      buyer: "Arjun Vishvakarma",
-      projectDetails:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      price: 800,
-      deliveryTime: "26/11/2022",
-      postDay: "17/11/2022",
-      offer: "275",
-    },
-    {
-      id: 2,
-      buyer: "Rahul Borawat",
-      projectDetails:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      price: 1000,
-      deliveryTime: "20/11/2022",
-      postDay: "17/11/2022",
-      offer: "625",
-    },
-    {
-      id: 2,
-      buyer: "Sonu Singh",
-      projectDetails:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      price: 900,
-      deliveryTime: "21/11/2022",
-      postDay: "18/11/2022",
-      offer: "925",
-    },
-  ];
+  const searchData = (e) => {
+    const { value } = e.target;
+    setData(searchBuyer(value));
+  }
 
   return (
     <div className="dash">
       <div className="dash_search">
         <h1>Search Project</h1>
         <div className="dash_search_search-input">
-          <input type="text" placeholder="Search more projects" />
+          <input onChange={searchData} type="text" placeholder="Search more projects" />
           <Search />
         </div>
         <div className="dash_search_res-search">
@@ -281,7 +160,8 @@ const Dashboard = () => {
         <CustomTable
           className="projects-table"
           columns={columns}
-          dataSource={dataSource}
+          dataSource={data}
+          PageSize={5}
         />
       </div>
     </div>
