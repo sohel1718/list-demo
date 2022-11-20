@@ -1,0 +1,19 @@
+.capitlize {text-transform: capitalize;}
+.fw_600 {font-weight: 600;}
+.send-btn {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px;
+    svg {
+        margin-right: 7px;
+    }
+}
+
+.d_flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

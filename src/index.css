@@ -1,0 +1,61 @@
+input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+input[type=file]::-moz-file-upload-button {
+  cursor: pointer;
+}
+
+input[type=file]::-ms-file-upload-button {
+  cursor: pointer;
+}
+
+input[type=file]::-o-file-upload-button {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=file] {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: visible;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 10px;
+}
+
+*::-moz-selection {
+  color: #ffffff;
+  background: #000000;
+}
+
+*::-webkit-selection {
+  color: #ffffff;
+  background: #000000;
+}
+
+*::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
