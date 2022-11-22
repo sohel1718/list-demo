@@ -1,28 +1,26 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 3vw;
-  justify-content: space-between;
+  gap: 5vw;
+  justify-content: center;
   background: $light_gray_s4;
   height: fit-content;
   left: 0;
   padding: 8.6rem 6rem;
   transition: all 0.3s;
-  @media only screen and (max-width: 968px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+  @media only screen and (max-width: 1068px) {
+    justify-content: unset;
   }
   @media only screen and (max-width: 568px) {
-    padding: 3.5rem 2rem;
+    padding: 4.5rem 3rem;
+  }
+  @media only screen and (max-width: 368px) {
+    padding: 4.5rem 2rem;
   }
   &_address {
     display: flex;
     flex-direction: column;
     margin-right: 1.5rem;
-    @media only screen and (max-width: 768px) {
-    //  flex-direction: row;
-    }
 
     &_logo {
       width: 100%;
@@ -66,13 +64,11 @@
         font-size: 18px;
         line-height: 2.5rem;
       }
-    }
-    @media only screen and (max-width: 568px) {
-      flex-direction: column;
-      &_text {
+      @media only screen and (max-width: 1068px) {
         max-width: 100%;
       }
     }
+    
   }
   &_nav {
     display: flex;
@@ -81,10 +77,16 @@
     @media only screen and (max-width: 768px) {
       justify-content: space-between;
     }
+    @media only screen and (max-width: 768px) {
+      column-gap: 5vw;
+    }
+    @media only screen and (max-width: 368px) {
+      column-gap: 3vw;
+    }
     &_block {
       display: flex;
       flex-direction: column;
-      margin-right: 1.5rem;
+     // margin-right: 1.5rem;
       h1 {
         font-family: Raleway;
         font-style: normal;
@@ -110,6 +112,10 @@
         cursor: pointer;
         @media only screen and (max-width: 568px) {
           font-size: 18px;
+          line-height: 2.5rem;
+        }
+        @media only screen and (max-width: 368px) {
+          font-size: 16px;
           line-height: 2.5rem;
         }
       }

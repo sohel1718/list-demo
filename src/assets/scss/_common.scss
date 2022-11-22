@@ -1,19 +1,54 @@
-.capitlize {text-transform: capitalize;}
-.fw_600 {font-weight: 600;}
+.capitlize {
+  text-transform: capitalize;
+}
+.fw_600 {
+  font-weight: 600;
+}
+.jc_center {
+  justify-content: center !important;
+}
+.jc_left {
+  justify-content: left !important;
+}
+.text_left {
+  text-align: left !important;
+}
 .send-btn {
-    display: flex;
-    align-items: center;
-    background-color: $black;
-    color: $white;
-    border-radius: 5px;
-    padding: 7px;
-    svg {
-        margin-right: 7px;
-    }
+  display: flex;
+  align-items: center;
+  background-color: $black;
+  color: $white;
+  border-radius: 5px;
+  padding: 7px;
+  svg {
+    margin-right: 7px;
+  }
 }
 
 .d_flex_center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_ellipse {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  // Addition lines for 2 line or multiline ellipsis
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  width: 200px;
+  margin: 0;
+}
+
+.details_text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #1d1d1d;
 }

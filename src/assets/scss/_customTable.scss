@@ -3,6 +3,9 @@
   background: $dark_white;
   border-radius: 14px;
   margin-top: -70px;
+
+  // filter css
+
   &_filter {
     padding: 14px 29px 23px 29px;
     border-bottom: 1px solid $light_gray;
@@ -36,7 +39,7 @@
         align-items: center;
         justify-content: center;
         &::after {
-          content: "Filter";
+          content: 'Filter';
           position: absolute;
           font-family: Poppins;
           font-style: normal;
@@ -107,7 +110,7 @@
           -webkit-appearance: none;
           -moz-appearance: none;
           background: transparent;
-          background-image: url("../images/down_arrow.svg");
+          background-image: url('../images/down_arrow.svg');
           background-repeat: no-repeat;
           background-position-x: 92%;
           background-position-y: 20px;
@@ -128,7 +131,7 @@
         align-items: flex-end;
         margin-top: 20px;
         h1 {
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-style: normal;
           font-weight: 600;
           font-size: 18px;
@@ -154,319 +157,145 @@
       }
     }
   }
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 15px;
 
-    &:first-child {
-      border-spacing: 0 0px;
-    }
+  // table css
 
-    thead {
-      @media only screen and (max-width: 768px) {
-        display: none;
+  // &_table {
+  //   &_thead {
+  //     &_tr {
+  //       display: flex;
+  //       gap: 1rem;
+  //       padding: 23px 0 22px 75px;
+  //       &_th {
+  //         align-items: center;
+  //         display: flex;
+  //         flex: 1 1;
+  //         flex-wrap: wrap;
+  //         // width: 100%;
+  //         // padding: 20px 0;
+  //         font-family: 'Poppins';
+  //         font-style: normal;
+  //         font-weight: 600;
+  //         font-size: 22px;
+  //         line-height: 33px;
+  //         color: $bg_color;
+  //       }
+  //     }
+  //   }
+  //   &_tbody {
+  //     &_tr {
+  //       align-items: center;
+  //       display: flex;
+  //       flex: 1 1;
+  //       background: $white;
+  //       margin-bottom: 15px;
+  //       &_td {
+  //         padding: 20px 0;
+  //         font-family: Poppins;
+  //         font-style: normal;
+  //         font-weight: 600;
+  //         font-size: 18px;
+  //         line-height: 27px;
+  //         vertical-align: middle;
+  //         //min-width: 269px;
+  //         width: 100%;
+  //         text-align: center;
+
+  //         .buyer {
+  //           padding-left: 29px;
+  //           &_left {
+  //             display: flex;
+  //             align-items: center;
+  //             &_avatar {
+  //               padding: 14px;
+  //               border-radius: 8px;
+  //               display: flex;
+  //               align-items: center;
+  //               margin-right: 16px;
+  //             }
+  //           }
+  //         }
+  //         .tag {
+  //           height: 47px;
+  //           width: 98px;
+  //           border-radius: 9px;
+  //           margin: 0 auto;
+  //           display: flex;
+  //           align-items: center;
+  //           justify-content: center;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  &_content {
+    margin-bottom: 5rem;
+    &_header {
+      display: flex;
+      gap: 1rem;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid #dcdcdc;
+      &_col {
+        align-items: center;
+        color: #07a189;
+        display: flex;
+        flex: 1 1;
+        flex-wrap: wrap;
+        font-weight: 700;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        color: #07a189;
       }
-      tr {
-        th {
-          border-bottom: 1px solid $light_gray;
-          text-align: center;
-          padding: 23px 20px;
-          font-family: Poppins;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 22px;
-          line-height: 33px;
-          color: $bg_color;
-          &:nth-child(2) {
-            @media only screen and (max-width: 1068px) {
-              display: none;
-            }
-          }
-          @media only screen and (max-width: 1068px) {
-            font-size: 18px;
-          }
-        }
-      }
     }
-    tbody {
-      tr {
-        border-radius: 14px;
-        td {
-          font-weight: 600;
-          text-align: center;
-          font-family: Poppins;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          padding: 14px 20px;
-          line-height: 27px;
-          color: $light_black;
-        }
-      }
-    }
-  }
-}
-
-.projects-table {
-  tbody {
-    tr {
-      background: $white;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      td {
-        &:first-child {
-          border-top-left-radius: 14px;
-          border-bottom-left-radius: 14px;
-          width: 200px;
-        }
-
-        &:nth-child(3) {
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        }
-
-        &:nth-child(4) {
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        }
-
-        &:nth-child(5) {
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        }
-
-        &:nth-child(6) {
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        }
-
-        &:nth-child(7) {
-          @media only screen and (max-width: 768px) {
-            display: none;
-          }
-        }
-
-        &:last-child {
-          border-top-right-radius: 14px;
-          border-bottom-right-radius: 14px;
-        }
-        &:nth-child(2) {
-          p {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            // Addition lines for 2 line or multiline ellipsis
-            display: -webkit-box !important;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            white-space: normal;
-            width: 200px;
-            margin: 0;
-          }
-          @media only screen and (max-width: 1068px) {
-            display: none;
-          }
-        }
-
-        &:nth-child(5) {
-          @media only screen and (max-width: 1068px) {
-            font-size: 16px;
-          }
-        }
+    &_row {
+      background-color: $white;
+      border-radius: 10px;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      &_col {
+        align-items: center;
+        display: flex;
+        flex: 1 1;
+        flex-wrap: wrap;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #000000;
 
         .buyer {
-          display: flex;
-          align-items: center;
-          
-          font-weight: 600;
-          @media only screen and (max-width: 768px) {
-            justify-content: space-between;
-          }
           &_left {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             &_avatar {
-              background: rgba(255, 205, 130, 0.34);
+              padding: 14px;
               border-radius: 8px;
-              width: 100%;
-              //padding: 12px 0px 7px 0px;
-              min-width: 47px;
-              min-height: 47px;
-              max-width: 27px;
-              margin-right: 16px;
               display: flex;
               align-items: center;
-              justify-content: center;
-              @media only screen and (max-width: 768px) {
-                min-width: 70px;
-                min-height: 70px;
-                svg {
-                  height: 36px;
-                  width: 30px;
-                }
-              }
+              margin-right: 16px;
             }
             &_title {
-              @media only screen and (max-width: 1068px) {
-                display: flex;
-                flex-direction: column;
-                align-items: baseline;
-              }
-  
-              &_res {
-                display: none;
-                @media only screen and (max-width: 768px) {
-                  display: flex;
-                  align-items: center;
-                  &_price {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: baseline;
-                    margin-right: 23px;
-                    h1 {
-                      margin: 0;
-                      font-family: "Poppins";
-                      font-style: normal;
-                      font-weight: 600;
-                      font-size: 12px;
-                      line-height: 18px;
-                      /* identical to box height */
-  
-                      color: $light_gray_s3;
-                      margin-bottom: 3px;
-                    }
-                    div {
-                      font-size: 14px;
-                    }
-                  }
-                  &_tag {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: baseline;
-                    h1 {
-                      margin: 0;
-                      font-family: "Poppins";
-                      font-style: normal;
-                      font-weight: 600;
-                      font-size: 12px;
-                      line-height: 18px;
-                      /* identical to box height */
-  
-                      color: $light_gray_s3;
-                      margin-bottom: 3px;
-                    }
-                    div {
-                      font-size: 14px;
-                      background: rgba(198, 164, 255, 0.25);
-                      border-radius: 9px;
-                      //padding: 11px 19px;
-                      width: 100%;
-                      min-width: 49px;
-                      min-height: 26px;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      text-transform: capitalize;
-                      color: $purple;
-                      max-width: 98px;
-                      margin: 0 auto;
-                    }
-                  }
-                }
-              }
+              text-overflow: ellipsis;
+              max-width: 80px;
+              overflow: hidden;
             }
-          }
-
-          &_btn {
-            display: none;
-            @media only screen and (max-width: 768px) {
-              display: flex;
-              flex-direction: column;
-              align-items: baseline;
-              justify-content: space-between;
-            }
-            span {
-              font-family: "Poppins";
-              font-style: normal;
-              font-weight: 600;
-              font-size: 14px;
-              line-height: 21px;
-              /* identical to box height */
-              margin-bottom: 12px;
-              color: $light_gray_s2;
-            }
-
-            button {
-              background: $black;
-              border-radius: 5px;
-              border: none;
-              color: $white;
-              font-family: "Poppins";
-              font-style: normal;
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 21px;
-              /* identical to box height */
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 8px 6px;
-              span {
-                color: $white;
-                flex-direction: column;
-                margin: 0;
-                @media only screen and (max-width: 468px) {
-                  font-size: 12px;
-                }
-                @media only screen and (max-width: 368px) {
-                  font-size: 10px;
-                }
-              }
-              svg {
-                width: 17px;
-                height: 12px;
-                margin-right: 5px;
-              }
-            }
-          }
-
-          
-        }
-
-        .price {
-          svg {
-            margin-right: 3px;
-          }
-          font-weight: 600;
-          @media only screen and (max-width: 1068px) {
-            font-size: 16px;
           }
         }
-
         .tag {
-          background: rgba(198, 164, 255, 0.25);
+          height: 47px;
+          width: 98px;
           border-radius: 9px;
-          //padding: 11px 19px;
-          width: 100%;
-          min-width: 98px;
-          min-height: 47px;
           display: flex;
           align-items: center;
           justify-content: center;
-          text-transform: capitalize;
-          color: $purple;
-          max-width: 98px;
-          margin: 0 auto;
-          @media only screen and (max-width: 1068px) {
-            width: 100%;
-            min-width: 78px;
-            min-height: 36px;
-            font-size: 16px;
-            //background: unset !important;
-          }
         }
       }
     }

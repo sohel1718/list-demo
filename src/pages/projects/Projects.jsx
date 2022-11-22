@@ -1,13 +1,13 @@
+import CustomTable from "../../components/CustomTable";
 import { ReactComponent as Search } from "../../assets/images/search-black.svg";
 import { ReactComponent as User } from "../../assets/images/user.svg";
 import { ReactComponent as Ruppe } from "../../assets/images/ruppe.svg";
 import { ReactComponent as CurvedArrow } from "../../assets/images/curvedArrow.svg";
-import CustomTable from "../../components/CustomTable";
 import { getDeliveryTime, getPostTime, stringToHslColor } from "../../utils";
 import { useEffect, useState } from "react";
 import { getData, searchBuyer } from "../../utils/database";
 
-const Dashboard = () => {
+const Projects = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Dashboard = () => {
       title: "Buyer",
       dataIndex: "buyer",
       key: "buyer",
-      align: "center",
+      className: "text_center jc_left",
       render: (data) => {
         let color = stringToHslColor(data.buyer);
         let iconColor = stringToHslColor(data.buyer, 50, 40);
@@ -30,25 +30,8 @@ const Dashboard = () => {
               <User style={{ fill: iconColor }} />
             </div>
             <div className="buyer_left_title">
-              <span>{data.buyer}</span>
-              <div className="buyer_left_title_res">
-                <div className="buyer_left_title_res_price">
-                  <h1>Price</h1>
-                  <div>{data.price}/-</div>
-                </div>
-                <div className="buyer_left_title_res_tag">
-                  <h1>Delivery Time</h1>
-                  <div style={{ backgroundColor: color, color: iconColor }} >2 Days</div>
-                </div>
-              </div>
+              {data.buyer}
             </div>
-            </div>
-            <div className="buyer_btn">
-              <span>{getPostTime(data.postDay)}</span>
-              <button>
-                <CurvedArrow />
-                <span>Send Offer</span>
-              </button>
             </div>
           </div>
         );
@@ -58,17 +41,17 @@ const Dashboard = () => {
       title: "Project Details",
       dataIndex: "projectDetails",
       key: "projectDetails",
-      align: "left",
+      className: "text_left jc_left",
       //width: '194px',
       render: (data) => {
-        return <p>{data.projectDetails}</p>;
+        return <p className="details_text text_ellipse" >{data.projectDetails}</p>;
       },
     },
     {
       title: "Price",
       dataIndex: "price",
       key: "price",
-      align: "center",
+      className: "text_center jc_center",
       //width: '194px',
       render: (data) => {
         return (
@@ -83,7 +66,7 @@ const Dashboard = () => {
       title: "Delivery Time",
       dataIndex: "deliveryTime",
       key: "deliveryTime",
-      align: "center",
+      className: "text_center jc_center",
       //width: '194px',
       render: (data) => {
         let color = stringToHslColor(data.buyer);
@@ -102,7 +85,7 @@ const Dashboard = () => {
       title: "Post Day",
       dataIndex: "postDay",
       key: "postDay",
-      align: "center",
+      className: "text_center jc_center",
       //width: '194px',
       render: (data) => {
         return (
@@ -114,7 +97,7 @@ const Dashboard = () => {
       title: "Offer",
       dataIndex: "offer",
       key: "offer",
-      align: "center",
+      aclassName: "text_center jc_center",
       //width: '194px',
       render: (data) => {
         return <span className="fw_600">{data.offer}</span>;
@@ -144,7 +127,6 @@ const Dashboard = () => {
   return (
     <div className="dash">
       <div className="dash_search">
-        <h1>Search Project</h1>
         <div className="dash_search_search-input">
           <input onChange={searchData} type="text" placeholder="Search more projects" />
           <Search />
@@ -168,4 +150,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Projects;
