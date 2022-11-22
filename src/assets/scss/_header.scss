@@ -1,14 +1,10 @@
 .header {
   display: flex;
-  background-color: #e7fffb;
+  background-color: $light_bg_color;
   height: fit-content;
   justify-content: space-between;
   left: 0;
-<<<<<<< HEAD
-  padding: 2.7rem 5rem;
-=======
   padding: 2.7rem 5rem 2.7rem 6rem;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
   position: fixed;
   right: 0;
   top: 0;
@@ -21,16 +17,13 @@
     display: flex;
     align-items: center;
     width: 100%;
-<<<<<<< HEAD
-=======
     max-width: 772px;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
     &_logo {
       width: 100%;
       height: 100%;
       max-width: 16.2rem;
       max-height: 7rem;
-      background: #07a189;
+      background: $bg_color;
       border-radius: 1.5rem;
       margin-right: 3.8rem;
       cursor: pointer;
@@ -45,12 +38,8 @@
         font-weight: 600;
         font-size: 3rem;
         line-height: 4.5rem;
-        color: #ffffff;
-<<<<<<< HEAD
-        padding: 1.2rem 4.5rem;
-=======
+        color: $white;
         padding: 1.2rem 4.4rem 1.3rem 4.5rem;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
         @media only screen and (max-width: 568px) {
           padding: 0.4rem 2.4rem;
           font-size: 2.4rem;
@@ -60,26 +49,20 @@
     &_search {
       display: flex;
       width: 100%;
-<<<<<<< HEAD
-=======
       // max-width: 562px;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
       @media only screen and (max-width: 568px) {
         display: none;
       }
       input {
         box-sizing: border-box;
-        background: #ffffff;
-        border: 1px solid #07a189;
+        background: $white;
+        border: 1px solid $bg_color;
         box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
         border-radius: 1.5rem;
         padding: 1.5rem 5.8rem 1.5rem 6.1rem;
         width: 100%;
         max-width: 47.1rem;
-<<<<<<< HEAD
-=======
         max-height: 51px;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
         margin-right: 1.3rem;
         font-family: Poppins;
         &::placeholder {
@@ -95,14 +78,14 @@
         }
       }
       button {
-        background: #000000;
+        background: $black;
         box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
         border-radius: 1.5rem;
         padding: 1.3rem 3.3rem;
         border: none;
         font-family: Poppins;
         &:hover {
-          background: #07a189;
+          background: $bg_color;
         }
       }
     }
@@ -111,24 +94,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-<<<<<<< HEAD
-    width: 100%;
-=======
     //width: 100%;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
     @media only screen and (max-width: 1068px) {
       padding: 1.6rem 2.4rem;
       display: none;
     }
     &_nav {
-<<<<<<< HEAD
-      margin: 0px 4.2rem;
-      display: flex;
-=======
       margin: 0px 4.2rem 0px 3.5rem;
       display: flex;
       align-items: center;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
       @media only screen and (max-width: 1068px) {
         margin: 0px 2.2rem;
       }
@@ -138,17 +112,13 @@
         font-weight: 600;
         font-size: 1.8rem;
         line-height: 2.7rem;
-        color: #000000;
+        color: $black;
         cursor: pointer;
         &:first-child {
-<<<<<<< HEAD
-          margin-right: 2.8rem;
-=======
           margin-right: 1.8rem;
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
         }
         &:hover {
-          color: #07a189;
+          color: $bg_color;
         }
         @media only screen and (max-width: 1068px) {
           &:first-child {
@@ -175,7 +145,7 @@
           font-weight: 500;
           font-size: 1.2rem;
           line-height: 1.8rem;
-          color: #ffffff;
+          color: $white;
           position: absolute;
           left: 2rem;
           bottom: 2rem;
@@ -216,10 +186,10 @@
 .res-menu {
   top: 85px;
   z-index: 3;
-  background: #fff;
-  background: #e7fffb;
+  background: $white;
+  background: $light_bg_color;
   width: 100%;
-  color: #000;
+  color: $black;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -241,13 +211,13 @@
     opacity: 1;
   }
   &_item {
-    color: #000;
+    color: $black;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
     text-align: center;
-    background: #e7fffb;
-    color: #000;
+    background: $light_bg_color;
+    color: $black;
     padding: 10px;
     cursor: pointer;
   }

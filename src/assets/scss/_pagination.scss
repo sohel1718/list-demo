@@ -18,7 +18,7 @@
 
         svg {
           path {
-            fill: #a7a49d;
+            fill: $dark_gray_s2;
           }
         }
 
@@ -42,21 +42,21 @@
       line-height: 27px;
       /* identical to box height */
 
-      color: #7b7b7b;
-      border: 1px solid #07a189;
+      color: $dark_gray_s3;
+      border: 1px solid $bg_color;
       border-radius: 7px;
       padding: 2px 12px;
       margin: auto 8px;
       cursor: pointer;
       
       &:hover {
-        background: #07a189;
+        background: $bg_color;
         border-radius: 7px;
-        color: #fff;
+        color: $white;
       }
       &.selected {
-        background-color: #07a189;
-        color: #fff;
+        background-color: $bg_color;
+        color: $white;
       }
     }
     &_right {
@@ -68,7 +68,7 @@
         cursor: not-allowed;
         svg {
           path {
-            fill: #a7a49d;
+            fill: $dark_gray_s2;
           }
         }
         .arrow::before {

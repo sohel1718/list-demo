@@ -1,11 +1,11 @@
 .custom-table {
   width: 100%;
-  background: #f6f6f6;
+  background: $dark_white;
   border-radius: 14px;
   margin-top: -70px;
   &_filter {
     padding: 14px 29px 23px 29px;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid $light_gray;
     @media only screen and (max-width: 768px) {
       border-bottom: none;
       float: right;
@@ -20,14 +20,14 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 27px;
-        color: #6c6c6c;
+        color: $dark_gray_s1;
         margin: 0;
       }
       svg {
         margin-right: 11px;
       }
       @media only screen and (max-width: 768px) {
-        border: 0.8px solid #000000;
+        border: 0.8px solid $black;
         border-radius: 8px;
         min-width: 106px;
         min-height: 37px;
@@ -43,7 +43,7 @@
           font-weight: 600;
           font-size: 18px;
           line-height: 27px;
-          color: #000;
+          color: $black;
           margin: 0;
           right: 106px;
           @media only screen and (max-width: 568px) {
@@ -59,7 +59,7 @@
             margin-right: 55px;
           }
           path {
-            fill: #000;
+            fill: $black;
           }
         }
       }
@@ -81,7 +81,7 @@
           font-weight: 600;
           font-size: 15px;
           line-height: 22px;
-          color: #1d1d1d;
+          color: $light_black;
           margin: 0;
           margin-bottom: 6px;
           margin-top: 21px;
@@ -93,14 +93,14 @@
           min-width: 223px;
           max-height: 52px;
           padding: 12px 45px 12px 15px;
-          border: 1px solid #888888;
+          border: 1px solid $dark_gray;
           border-radius: 8px;
           font-family: Poppins;
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           line-height: 24px;
-          color: #b5b5b5;
+          color: $light_gray_s1;
           appearance: none;
           cursor: pointer;
           outline: none;
@@ -133,7 +133,7 @@
           font-weight: 600;
           font-size: 18px;
           line-height: 27px;
-          color: #6c6c6c;
+          color: $dark_gray_s1;
           margin: 0;
           margin-right: 35px;
           margin-bottom: 12px;
@@ -145,8 +145,8 @@
           font-size: 18px;
           line-height: 27px;
           /* identical to box height */
-          color: #6c6c6c;
-          background: #000;
+          color: $dark_gray_s1;
+          background: $black;
           padding: 10px 32px;
           border-radius: 11px;
           color: #fff;
@@ -169,7 +169,7 @@
       }
       tr {
         th {
-          border-bottom: 1px solid #dcdcdc;
+          border-bottom: 1px solid $light_gray;
           text-align: center;
           padding: 23px 20px;
           font-family: Poppins;
@@ -177,7 +177,7 @@
           font-weight: 600;
           font-size: 22px;
           line-height: 33px;
-          color: #07a189;
+          color: $bg_color;
           &:nth-child(2) {
             @media only screen and (max-width: 1068px) {
               display: none;
@@ -201,7 +201,7 @@
           font-size: 18px;
           padding: 14px 20px;
           line-height: 27px;
-          color: #1d1d1d;
+          color: $light_black;
         }
       }
     }
@@ -211,7 +211,7 @@
 .projects-table {
   tbody {
     tr {
-      background: #fff;
+      background: $white;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       td {
         &:first-child {
@@ -335,7 +335,7 @@
                       line-height: 18px;
                       /* identical to box height */
   
-                      color: #b0b0b0;
+                      color: $light_gray_s3;
                       margin-bottom: 3px;
                     }
                     div {
@@ -355,7 +355,7 @@
                       line-height: 18px;
                       /* identical to box height */
   
-                      color: #b0b0b0;
+                      color: $light_gray_s3;
                       margin-bottom: 3px;
                     }
                     div {
@@ -370,7 +370,7 @@
                       align-items: center;
                       justify-content: center;
                       text-transform: capitalize;
-                      color: #905de6;
+                      color: $purple;
                       max-width: 98px;
                       margin: 0 auto;
                     }
@@ -396,14 +396,14 @@
               line-height: 21px;
               /* identical to box height */
               margin-bottom: 12px;
-              color: #b9b9b9;
+              color: $light_gray_s2;
             }
 
             button {
-              background: #000000;
+              background: $black;
               border-radius: 5px;
               border: none;
-              color: #fff;
+              color: $white;
               font-family: "Poppins";
               font-style: normal;
               font-weight: 500;
@@ -415,7 +415,7 @@
               justify-content: center;
               padding: 8px 6px;
               span {
-                color: #ffffff;
+                color: $white;
                 flex-direction: column;
                 margin: 0;
                 @media only screen and (max-width: 468px) {
@@ -457,7 +457,7 @@
           align-items: center;
           justify-content: center;
           text-transform: capitalize;
-          color: #905de6;
+          color: $purple;
           max-width: 98px;
           margin: 0 auto;
           @media only screen and (max-width: 1068px) {

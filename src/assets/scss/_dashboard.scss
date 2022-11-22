@@ -3,14 +3,14 @@
   height: 100%;
   margin-top: 10rem;
   overflow: hidden;
-  background: #E7FFFB;
+  background: $light_bg_color;
   padding-bottom: 65px;
   @media only screen and (max-width: 568px) {
     margin-top: 6rem;
   }
   &_search {
     width: 100%;
-    background: #07a189;
+    background: $bg_color;
     padding: 24px 0px;
     //height: 100%;
     //min-height: 500px;
@@ -24,7 +24,7 @@
       font-weight: 600;
       font-size: 34px;
       line-height: 51px;
-      color: #ffffff;
+      color: $white;
       margin: 0;
       margin-top: 24px;
       margin-left: 60px;
@@ -56,8 +56,8 @@
       }
 
       input {
-        background: #ffffff;
-        border: 1px solid #07a189;
+        background: $white;
+        border: 1px solid $bg_color;
         box-shadow: 3px 18px 37px 10px rgba(165, 165, 165, 0.2);
         border-radius: 10px;
         padding: 20px 38px 20px 38px;
@@ -65,8 +65,6 @@
         max-width: 465px;
         font-family: Poppins;
         margin-right: 11px;
-<<<<<<< HEAD
-=======
         &::placeholder {
           font-family: Poppins;
           font-style: normal;
@@ -75,13 +73,12 @@
           line-height: 2.1rem;
           color: rgba(134, 134, 134, 0.31);
         }
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
         &:focus-visible {
           outline: none;
         }
       }
       button {
-        background: #000000;
+        background: $black;
         box-shadow: 3px 18px 37px 10px rgba(165, 165, 165, 0.2);
         border-radius: 10px;
         border: none;
@@ -89,7 +86,7 @@
         min-height: 46px;
         svg {
           path {
-            fill: #fff;
+            fill: $white;
           }
         }
       }
@@ -109,15 +106,15 @@
         width: 2px;
         position: absolute;
         content: "";
-        background: #000;
+        background: $black;
         height: 34px;
         z-index: 1;
         top: 12px;
         right: 20px;
       }
       input {
-        background: #ffffff;
-        border: 1px solid #07a189;
+        background: $white;
+        border: 1px solid $bg_color;
         box-shadow: 3px 18px 37px 10px rgba(165, 165, 165, 0.2);
         border-radius: 20px;
         padding: 20px 38px 20px 38px;
@@ -125,8 +122,6 @@
         max-width: 665px;
         font-family: Poppins;
         position: absolute;
-<<<<<<< HEAD
-=======
         &::placeholder {
           font-family: Poppins;
           font-style: normal;
@@ -135,7 +130,6 @@
           line-height: 2.1rem;
           color: rgba(134, 134, 134, 0.31);
         }
->>>>>>> 4e98f6432ce6c78ca3ff4dde88fc9e22da9ac98c
         &:focus-visible {
           outline: none;
         }
