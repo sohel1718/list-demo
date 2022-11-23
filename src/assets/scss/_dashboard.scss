@@ -24,11 +24,14 @@
 
       @media only screen and (max-width: 568px) {
         max-width: 316px;
+        margin: 0;
+        margin-bottom: 65px;
+        justify-content: flex-start;
       }
 
-      @media only screen and (max-width: 368px) {
-        padding: 0;
-      }
+      // @media only screen and (max-width: 368px) {
+      //   padding: 0;
+      // }
 
       input {
         background: $white;
