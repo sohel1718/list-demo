@@ -6,6 +6,9 @@
   &_filter {
     padding: 14px 29px 23px 29px;
     border-bottom: 1px solid #dcdcdc;
+    @media only screen and (max-width: 568px) {
+      display: none;
+    }
     &_title {
       display: flex;
       width: 100%;
@@ -111,6 +114,10 @@
     }
   }
 
+  &_table-wrapper {
+    overflow-x: auto;
+  }
+
   table {
     width: 100%;
     border-collapse: separate;
@@ -161,6 +168,43 @@
   @media only screen and (max-width: 568px) {
     display: none;
   }
+
+
+  thead {
+    tr {
+      th {
+        &:nth-child(1) {
+          min-width: 200px;
+          width: 200px;
+        }
+        &:nth-child(2) {
+          min-width: 200px;
+          width: 200px;
+        }
+        &:nth-child(3) {
+          min-width: 50px;
+          width: 50px;
+        }
+        &:nth-child(4) {
+          min-width: 160px;
+          width: 160px;
+        }
+        &:nth-child(5) {
+          min-width: 110px;
+          width: 110px;
+        }
+        &:nth-child(6) {
+          min-width: 100px;
+          width: 100px;
+        }
+        &:nth-child(7) {
+          min-width: 160px;
+          width: 160px;
+        }
+      }
+    }
+  }
+
   tbody {
     tr {
       background: #fff;

@@ -6,9 +6,11 @@ const BaseLayout = ({ children, title, handleNavigate }) => {
     <div className='base-layout'>
       <Header />
         <div className='base-layout_content'>
-            <div className='base-layout_content_banner'>
-                <h1>{title}</h1>
-            </div>  
+           <section>
+              <div className='base-layout_content_banner'>
+                  <h1>{title}</h1>
+              </div> 
+            </section> 
             <div className='base-layout_content_wrapper'>
                 {children}
             </div>

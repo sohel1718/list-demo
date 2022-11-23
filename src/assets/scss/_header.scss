@@ -1,181 +1,185 @@
-.header {
-  display: flex;
-  background-color: $light_bg_color;
-  height: fit-content;
-  justify-content: space-between;
-  left: 0;
-  padding: 2.7rem 5rem 2.7rem 6rem;
-  transition: all 0.3s;
-  z-index: 2;
-  @media only screen and (max-width: 1068px) {
-    padding: 1.6rem 2.4rem;
-  }
-  &_left {
+header {
+  // max-width: 1440px;
+  // margin: 0 auto;
+  .container {
     display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 772px;
-    &_logo {
-      width: 100%;
-      height: 100%;
-      max-width: 16.2rem;
-      max-height: 7rem;
-      background: $bg_color;
-      border-radius: 1.5rem;
-      margin-right: 3.8rem;
-      cursor: pointer;
-      @media only screen and (max-width: 568px) {
-        max-width: fit-content;
-        font-size: 2.4rem;
-        line-height: 3.6rem;
-      }
-      div {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 3rem;
-        line-height: 4.5rem;
-        color: $white;
-        padding: 1.2rem 4.4rem 1.3rem 4.5rem;
-        @media only screen and (max-width: 568px) {
-          padding: 0.4rem 2.4rem;
-          font-size: 2.4rem;
-        }
-      }
-    }
-    &_search {
-      display: flex;
-      width: 100%;
-      // max-width: 562px;
-      @media only screen and (max-width: 568px) {
-        display: none;
-      }
-      input {
-        box-sizing: border-box;
-        background: $white;
-        border: 1px solid $bg_color;
-        box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
-        border-radius: 1.5rem;
-        padding: 1.5rem 5.8rem 1.5rem 6.1rem;
-        width: 100%;
-        max-width: 47.1rem;
-        max-height: 51px;
-        margin-right: 1.3rem;
-        font-family: Poppins;
-        &::placeholder {
-          font-family: Poppins;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 1.4rem;
-          line-height: 2.1rem;
-          color: rgba(134, 134, 134, 0.31);
-        }
-        &:focus-visible {
-          outline: none;
-        }
-      }
-      button {
-        background: $black;
-        box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
-        border-radius: 1.5rem;
-        padding: 1.3rem 3.3rem;
-        border: none;
-        font-family: Poppins;
-        &:hover {
-          background: $bg_color;
-        }
-      }
-    }
-  }
-  &_right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    //width: 100%;
+    background-color: $light_bg_color;
+    height: fit-content;
+    justify-content: space-between;
+    left: 0;
+    padding: 2.7rem 5rem 2.7rem 6rem;
+    transition: all 0.3s;
+    z-index: 2;
     @media only screen and (max-width: 1068px) {
       padding: 1.6rem 2.4rem;
-      display: none;
     }
-    &_nav {
-      margin: 0px 4.2rem 0px 3.5rem;
+    &_left {
       display: flex;
       align-items: center;
-      @media only screen and (max-width: 1068px) {
-        margin: 0px 2.2rem;
-      }
-      span {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 2.7rem;
-        color: $black;
+      width: 100%;
+      max-width: 772px;
+      &_logo {
+        width: 100%;
+        height: 100%;
+        max-width: 16.2rem;
+        max-height: 7rem;
+        background: $bg_color;
+        border-radius: 1.5rem;
+        margin-right: 3.8rem;
         cursor: pointer;
-        &:first-child {
-          margin-right: 1.8rem;
+        @media only screen and (max-width: 568px) {
+          max-width: fit-content;
+          font-size: 2.4rem;
+          line-height: 3.6rem;
         }
-        &:hover {
-          color: $bg_color;
+        div {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 3rem;
+          line-height: 4.5rem;
+          color: $white;
+          padding: 1.2rem 4.4rem 1.3rem 4.5rem;
+          @media only screen and (max-width: 568px) {
+            padding: 0.4rem 2.4rem;
+            font-size: 2.4rem;
+          }
         }
-        @media only screen and (max-width: 1068px) {
-          &:first-child {
-            margin-right: 2rem;
+      }
+      &_search {
+        display: flex;
+        width: 100%;
+        // max-width: 562px;
+        @media only screen and (max-width: 568px) {
+          display: none;
+        }
+        input {
+          box-sizing: border-box;
+          background: $white;
+          border: 1px solid $bg_color;
+          box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
+          border-radius: 1.5rem;
+          padding: 1.5rem 5.8rem 1.5rem 6.1rem;
+          width: 100%;
+          max-width: 47.1rem;
+          max-height: 51px;
+          margin-right: 1.3rem;
+          font-family: Poppins;
+          &::placeholder {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            color: rgba(134, 134, 134, 0.31);
+          }
+          &:focus-visible {
+            outline: none;
+          }
+        }
+        button {
+          background: $black;
+          box-shadow: 0.3rem 1.8rem 3.7rem 1rem rgba(165, 165, 165, 0.2);
+          border-radius: 1.5rem;
+          padding: 1.3rem 3.3rem;
+          border: none;
+          font-family: Poppins;
+          &:hover {
+            background: $bg_color;
           }
         }
       }
     }
-    &_icons {
+    &_right {
       display: flex;
-      &_icon {
-        position: relative;
-        cursor: pointer;
-        &:first-child {
-          margin-right: 4rem;
+      align-items: center;
+      justify-content: flex-end;
+      //width: 100%;
+      @media only screen and (max-width: 1068px) {
+        padding: 1.6rem 2.4rem;
+        display: none;
+      }
+      &_nav {
+        margin: 0px 4.2rem 0px 3.5rem;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: 1068px) {
+          margin: 0px 2.2rem;
         }
         span {
-          background: #da0028;
-          padding: 0px 5.67px;
-          border-radius: 50%;
           font-family: Poppins;
           font-style: normal;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 1.2rem;
-          line-height: 1.8rem;
-          color: $white;
-          position: absolute;
-          left: 2rem;
-          bottom: 2rem;
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 2.7rem;
+          color: $black;
+          cursor: pointer;
+          &:first-child {
+            margin-right: 1.8rem;
+          }
+          &:hover {
+            color: $bg_color;
+          }
+          @media only screen and (max-width: 1068px) {
+            &:first-child {
+              margin-right: 2rem;
+            }
+          }
+        }
+      }
+      &_icons {
+        display: flex;
+        &_icon {
+          position: relative;
+          cursor: pointer;
+          &:first-child {
+            margin-right: 4rem;
+          }
+          span {
+            background: #da0028;
+            padding: 0px 5.67px;
+            border-radius: 50%;
+            font-family: Poppins;
+            font-style: normal;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: $white;
+            position: absolute;
+            left: 2rem;
+            bottom: 2rem;
+          }
+        }
+      }
+      &_menu {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &_avatar {
+          background: rgba(7, 162, 137, 0.26);
+          border-radius: 10px;
+          height: 100%;
+          width: 100%;
+          max-height: 5.3rem;
+          min-width: 5.3rem;
+          max-width: 5.3rem;
+          margin-right: 1.5rem;
+          margin-left: 3.1rem;
         }
       }
     }
-    &_menu {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      &_avatar {
-        background: rgba(7, 162, 137, 0.26);
-        border-radius: 10px;
-        height: 100%;
-        width: 100%;
-        max-height: 5.3rem;
-        min-width: 5.3rem;
-        max-width: 5.3rem;
-        margin-right: 1.5rem;
-        margin-left: 3.1rem;
+    &_right-mobile {
+      display: none;
+      @media only screen and (max-width: 1068px) {
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;
       }
-    }
-  }
-  &_right-mobile {
-    display: none;
-    @media only screen and (max-width: 1068px) {
-      display: flex;
-      align-items: center;
-      margin-left: 1.5rem;
-    }
-    svg {
-      cursor: pointer;
+      svg {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -9,13 +9,13 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <>
-      <div className="header">
-        <div className="header_left">
-          <div className="header_left_logo">
+    <header>
+      <div className="container">
+        <div className="container_left">
+          <div className="container_left_logo">
             <div>Logo</div>
           </div>
-          <div className="header_left_search">
+          <div className="container_left_search">
             <input
               type="text"
               placeholder="What are you looking here eg. freelancer, projects"
@@ -25,27 +25,27 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <div className="header_right">
-          <div className="header_right_nav">
+        <div className="container_right">
+          <div className="container_right_nav">
             <span>Post Project</span>
             <span>Search Project</span>
           </div>
-          <div className="header_right_icons">
-            <div className="header_right_icons_icon">
+          <div className="container_right_icons">
+            <div className="container_right_icons_icon">
               <Message />
               <span>4</span>
             </div>
-            <div className="header_right_icons_icon">
+            <div className="container_right_icons_icon">
               <Heart />
               <span>4</span>
             </div>
           </div>
-          <div className="header_right_menu">
-            <div className="header_right_menu_avatar"></div>
+          <div className="container_right_menu">
+            <div className="container_right_menu_avatar"></div>
             <DownArrow />
           </div>
         </div>
-        <div onClick={() => setToggle(!toggle)} className="header_right-mobile">
+        <div onClick={() => setToggle(!toggle)} className="container_right-mobile">
           <Menu />
         </div>
       </div>
@@ -57,7 +57,7 @@ const Header = () => {
           <div className="res-menu_item">Messages</div>
         </div>
       
-    </>
+    </header>
   );
 };
 

@@ -4,7 +4,8 @@ import { ReactComponent as Twitter } from '../../assets/images/twitter.svg';
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer>
+       <div className='footer'>
       <div className='footer_address'>
         <div className='footer_address_logo'>
           <div>Logo</div>
@@ -44,6 +45,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    </footer>
   );
 };
 
