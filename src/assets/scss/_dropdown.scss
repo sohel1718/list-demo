@@ -1,0 +1,46 @@
+.select-section{
+  .css-1s2u09g-control , .css-1pahdxg-control{
+    height: 52px;
+    margin-top: 6px;
+    box-shadow: 3px 18px 37px 10px rgb(165 165 165 / 20%);
+    border: 1px solid #07a189;
+    background: #ffffff;
+    border-radius: 15px;
+    svg{
+      color: #07a189;
+      width: 27px;
+      height: 27px;
+    }
+    .css-1okebmr-indicatorSeparator{
+      display: none;
+    }
+    .css-14el2xx-placeholder,.css-qc6sy-singleValue{
+      color: #595959;
+      font-size: 14px;
+      font-family: Poppins;
+      padding-left: 44px;
+      margin: 0;
+    }
+    .css-qc6sy-singleValue{
+      color: black;
+    }
+  }
+  .input-field-details{
+    position: relative;
+    .mail{
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    .location{
+      position: absolute;
+      top: 18px;
+      left: 15px;
+    }
+  }
+}
+
+.react-select__option{
+  font-size: 14px;
+  font-family: Poppins;
+}

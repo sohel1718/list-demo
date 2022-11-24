@@ -27,7 +27,7 @@ const Tabs = (props) => {
 
   return (
     <div className="tabs">
-      <ul className="tab-header">
+      <ul className="tabs_header">
         {tabHeader.map((item) => (
           <li
             onClick={() => changeTab(item)}

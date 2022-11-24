@@ -1,46 +1,38 @@
+import React, {useState} from "react";
+import Select from "react-select";
+import location from "../../../../assets/images/location.svg";
+
 const GigBox = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+  const options = [
+    { value: 'Option 1', label: 'Option 1' },
+    { value: 'Option 2', label: 'Option 2' },
+    { value: 'Option 3', label: 'Option 3' },
+  ];
   return (
     <div className={"box gigPricing_box_2"}>
       <div className={"gigPricing_box_2_title"}>
         <h2>Basic</h2>
       </div>
       <div className={"gigPricing_box_2_amount"}>
-        <p>Add Amount</p>
+        <input placeholder="Add Amount" />
       </div>
       <div className={"gigPricing_box_2_select_time"}>
-        <div className="dropdown">
-          <input
-            type="checkbox"
-            className="dropdown__switch"
-            id="filter-switch"
-            hidden
+        <div className={"select-section"}>
+          <Select
+              isSearchable={false}
+              value={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+              placeholder={'Select Time'}
+              styles={{
+                option: (base) => ({
+                  ...base,
+                  fontSize:'14px',
+                  fontFamily:'Poppins'
+                }),
+              }}
           />
-          <label htmlFor="filter-switch" className="dropdown__options-filter">
-            <ul className="dropdown__filter" role="listbox" tabIndex="-1">
-              <li className="dropdown__filter-selected" aria-selected="true">
-                Select Time
-              </li>
-              <li>
-                <ul className="dropdown__select">
-                  <li className="dropdown__select-option" role="option">
-                    Option 1
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 2
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 3
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 4
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 5
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </label>
         </div>
       </div>
       <div className={"gigPricing_box_2_points"}>
@@ -53,39 +45,21 @@ const GigBox = () => {
         </ul>
       </div>
       <div className={"gigPricing_box_2_select_revision "}>
-        <div className="dropdown">
-          <input
-            type="checkbox"
-            className="dropdown__switch"
-            id="filter-switch"
-            hidden
+        <div className={"select-section"}>
+          <Select
+              isSearchable={false}
+              value={selectedOption}
+              onChange={setSelectedOption}
+              options={options}
+              placeholder={'Revision'}
+              styles={{
+                option: (base) => ({
+                  ...base,
+                  fontSize:'14px',
+                  fontFamily:'Poppins'
+                }),
+              }}
           />
-          <label htmlFor="filter-switch" className="dropdown__options-filter">
-            <ul className="dropdown__filter" role="listbox" tabIndex="-1">
-              <li className="dropdown__filter-selected" aria-selected="true">
-                Revision
-              </li>
-              <li>
-                <ul className="dropdown__select">
-                  <li className="dropdown__select-option" role="option">
-                    Option 1
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 2
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 3
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 4
-                  </li>
-                  <li className="dropdown__select-option" role="option">
-                    Option 5
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </label>
         </div>
       </div>
     </div>
